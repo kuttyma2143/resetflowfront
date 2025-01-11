@@ -1,7 +1,7 @@
 import React from 'react'
 import Signup from './components/Signup.jsx'
 import Login from './components/Login.jsx'
-import Dashboard from './components/Dashboard.jsx'
+
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import Forgetpassword from './components/Forgetpassword.jsx'
 import Resetpassword from './components/Resetpassword.jsx'
@@ -17,11 +17,11 @@ function App() {
 
 <Route path='/signin' element={<Login/>}/>
 
-<Route path='/dashboard' element={<Dashboard/>}/>
+
 
 <Route path='/forget-password' element={<Forgetpassword/>}/>
 
-<Route path='/reset-password/:randomString/:expirationTimestamp' element={<Resetpassword/>}/>
+<Route path='/reset-password' element={<Resetpassword/>}/>
 
 <Route path='*' element={<Login/>}/>
 

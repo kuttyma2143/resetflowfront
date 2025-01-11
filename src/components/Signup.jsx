@@ -11,8 +11,8 @@ function Signup() {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
-
-  let [userName,setUserName] = useState("")
+  let [firstName,setfirstName] = useState("")
+  let [lastName,setlastName] = useState("")
   let [email,setEmail] = useState("")
   let [password,setPassword] = useState("")
   
@@ -23,7 +23,8 @@ function Signup() {
     setLoading(true)
     try {
       let res = await AxiosService.post('/user/signup',{
-        userName,
+        firstName,
+        lastName,
         email,
         password
       })
@@ -57,7 +58,11 @@ function Signup() {
         <h3>Welcome </h3>
         <form className="login-form">
           <div className="textbox">
-            <input type="text" placeholder="Username" required onChange={(e)=>setUserName(e.target.value)}  />
+            <input type="text" placeholder="Firstname" required onChange={(e)=>setfirstName(e.target.value)}  />
+            <span className="material-symbols-outlined"> account_circle </span>
+          </div>
+          <div className="textbox">
+            <input type="text" placeholder="Lastname" required onChange={(e)=>setlastName(e.target.value)}  />
             <span className="material-symbols-outlined"> account_circle </span>
           </div>
 

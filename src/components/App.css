@@ -20,9 +20,9 @@
     place-items: center;
     margin: 0;
     padding: 0 24px;
-    background-image:url('/src/images/low-poly-grid-haikei.svg') !important  ;
-    background-size: 2600px 1100px;
-    background-position: -500px 0;
+    background-image:url('/src/images/reset.jpg') !important  ;
+    background-size: 2000px 800px;
+    background-position: -300px 0;
     color: #f9f9f9 !important;
     font-family: "Euclid Circular A";
     /* animation: gradient 10s infinite alternate linear; */

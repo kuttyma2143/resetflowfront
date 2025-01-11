@@ -26,6 +26,8 @@ const forgetpassword = async(e)=>{
         if(res.status==200)
         {
             toast.success("Reset link sent successfully to your email.please check the email ")
+            navigate('/reset-password');
+
         }
     } catch (error) {
         console.log(error)

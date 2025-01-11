@@ -68,12 +68,23 @@ function Resetpassword() {
 
         <form className="login-form">
          
+
+        <div className="textbox">
+          <input
+              type={showPassword ? 'CODE' : 'OTP'} // Here is the change
+              placeholder="OTP" onChange={(e)=>SetOTP(e.target.value)}
+            />
+             <span style={{ paddingBottom: '0px' }} className="material-symbols-outlined">
+              {' '}
+              lock{' '}
+            </span>
+            </div>
           <div className="textbox">
             <input
               type={showPassword ? 'text' : 'password'} // Here is the change
-              placeholder="Password" onChange={(e)=>setPassword(e.target.value)}
+              placeholder="New Password" onChange={(e)=>setPassword(e.target.value)}
             />
-            <span style={{ paddingBottom: '70px' }} className="material-symbols-outlined">
+            <span style={{ paddingBottom: '60px' }} className="material-symbols-outlined">
               {' '}
               lock{' '}
             </span>
